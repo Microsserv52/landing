@@ -22,5 +22,7 @@ test("privacy provides a working analytics opt-out", async ({ page }) => {
   await page
     .getByRole("button", { name: "Disable optional analytics on this browser" })
     .click();
-  await expect(page.getByRole("alert")).toContainText("disabled");
+  await expect(
+    page.getByRole("alert").filter({ hasText: "Optional analytics" }),
+  ).toContainText("disabled");
 });
