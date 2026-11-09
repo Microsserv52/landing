@@ -1,0 +1,89 @@
+.landing-intro {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 80px;
+  padding-top: 84px;
+  padding-bottom: 72px;
+}
+.intro-copy {
+  max-width: 500px;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+.intro-note {
+  font-size: 0.78rem;
+  margin-top: 20px;
+}
+.intro-aside {
+  background: var(--tile);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+.aside-mark {
+  align-self: flex-end;
+  font:
+    italic 6rem/0.9 Georgia,
+    serif;
+  color: var(--accent);
+}
+.intro-aside h2 {
+  font-size: 2rem;
+}
+.intro-aside p:not(.section-label) {
+  font-size: 0.9rem;
+}
+.intro-aside a {
+  font-size: 0.85rem;
+}
+.catalog-preview {
+  border-top: 1px solid var(--line);
+}
+.section-heading {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.section-heading > a {
+  font-size: 0.85rem;
+}
+.demo-explainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  border-top: 1px solid var(--line);
+}
+.demo-explainer p:first-child {
+  margin-top: 0;
+}
+@media (max-width: 800px) {
+  .landing-intro {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 44px;
+  }
+  .intro-aside {
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  .aside-mark {
+    font-size: 4rem;
+  }
+  .demo-explainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+  .intro-aside {
+    padding: 24px;
+  }
+}
